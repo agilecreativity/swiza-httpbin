@@ -1,0 +1,101 @@
+$lein native-image
+Warning: Using a deprecated option --rerun-class-initialization-at-runtime. Currently there is no replacement for this option. Try using --initialize-at-run-time or use the non-API option -H:ClassInitialization directly.
+Executing [
+/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/bin/java \
+-XX:+UnlockExperimentalVMOptions \
+-XX:+EnableJVMCI \
+-Dtruffle.TrustAllTruffleRuntimeProviders=true \
+-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime \
+-Dgraalvm.ForcePolyglotInvalid=true \
+-Dgraalvm.locatorDisabled=true \
+-d64 \
+-XX:-UseJVMCIClassLoader \
+-XX:+UseJVMCINativeLibrary \
+-Xss10m \
+-Xms1g \
+-Xmx13743895344 \
+-Duser.country=US \
+-Duser.language=en \
+-Dorg.graalvm.version=19.2.0 \
+-Dorg.graalvm.config=CE \
+-Dcom.oracle.graalvm.isaot=true \
+-Djvmci.class.path.append=/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/graal.jar \
+-Xbootclasspath/a:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/boot/graaljs-scriptengine.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/boot/graal-sdk.jar \
+-cp \
+/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/llvm-wrapper.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/svm.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/javacpp.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/objectfile.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/graal-llvm.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/svm-llvm.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/llvm-platform-specific.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/pointsto.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/graal.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/graal-management.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/jvmci-api.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/jvmci-hotspot.jar \
+com.oracle.svm.hosted.NativeImageGeneratorRunner \
+-imagecp \
+/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/boot/graaljs-scriptengine.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/boot/graal-sdk.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/llvm-wrapper.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/svm.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/javacpp.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/objectfile.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/graal-llvm.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/svm-llvm.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/llvm-platform-specific.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/pointsto.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/graal.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/graal-management.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/jvmci-api.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/jvmci-hotspot.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/library-support.jar:/Users/bchoomnuan/apps/swiza/swiza-httpbin/src/test/clojure:/Users/bchoomnuan/apps/swiza/swiza-httpbin/src/test/java:/Users/bchoomnuan/apps/swiza/swiza-httpbin/src/main/clojure:/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/classes:/Users/bchoomnuan/.m2/repository/org/clojars/hozumi/clj-commons-exec/1.2.0/clj-commons-exec-1.2.0.jar:/Users/bchoomnuan/.m2/repository/org/flatland/classlojure/0.7.0/classlojure-0.7.0.jar:/Users/bchoomnuan/.m2/repository/nrepl/nrepl/0.6.0/nrepl-0.6.0.jar:/Users/bchoomnuan/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.9/jackson-datatype-jsr310-2.9.9.jar:/Users/bchoomnuan/.m2/repository/alembic/alembic/0.3.2/alembic-0.3.2.jar:/Users/bchoomnuan/.m2/repository/clojure-complete/clojure-complete/0.2.5/clojure-complete-0.2.5.jar:/Users/bchoomnuan/.m2/repository/expound/expound/0.7.2/expound-0.7.2.jar:/Users/bchoomnuan/.m2/repository/cucl/cucl/0.1.11/cucl-0.1.11.jar:/Users/bchoomnuan/.m2/repository/camel-snake-kebab/camel-snake-kebab/0.4.0/camel-snake-kebab-0.4.0.jar:/Users/bchoomnuan/.m2/repository/org/clojars/brenton/google-diff-match-patch/0.1/google-diff-match-patch-0.1.jar:/Users/bchoomnuan/.m2/repository/lein-as-resource/lein-as-resource/2.5.0/lein-as-resource-2.5.0.jar:/Users/bchoomnuan/.m2/repository/org/tcrawley/dynapath/0.2.3/dynapath-0.2.3.jar:/Users/bchoomnuan/.m2/repository/clj-time/clj-time/0.15.1/clj-time-0.15.1.jar:/Users/bchoomnuan/.m2/repository/org/clojure/test.check/0.9.0/test.check-0.9.0.jar:/Users/bchoomnuan/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.9.1/jackson-databind-2.9.9.1.jar:/Users/bchoomnuan/.m2/repository/cli-matic/cli-matic/0.3.8/cli-matic-0.3.8.jar:/Users/bchoomnuan/.m2/repository/lambdaisland/ansi/0.1.6/ansi-0.1.6.jar:/Users/bchoomnuan/.m2/repository/org/ow2/asm/asm-all/5.2/asm-all-5.2.jar:/Users/bchoomnuan/.m2/repository/org/clojure/clojure/1.9.0/clojure-1.9.0.jar:/Users/bchoomnuan/.m2/repository/http-kit/http-kit/2.3.0/http-kit-2.3.0.jar:/Users/bchoomnuan/.m2/repository/joda-time/joda-time/2.10/joda-time-2.10.jar:/Users/bchoomnuan/.m2/repository/jonase/eastwood/0.3.6/eastwood-0.3.6.jar:/Users/bchoomnuan/.m2/repository/org/tukaani/xz/1.5/xz-1.5.jar:/Users/bchoomnuan/.m2/repository/net/b12n/swiza-commons/0.1.2/swiza-commons-0.1.2.jar:/Users/bchoomnuan/.m2/repository/org/clojure/core.specs.alpha/0.1.24/core.specs.alpha-0.1.24.jar:/Users/bchoomnuan/.m2/repository/org/clojure/tools.namespace/0.2.11/tools.namespace-0.2.11.jar:/Users/bchoomnuan/.m2/repository/akvo/fs/20180904-152732.6dad3934/fs-20180904-152732.6dad3934.jar:/Users/bchoomnuan/.m2/repository/org/clojure/data.xml/0.0.8/data.xml-0.0.8.jar:/Users/bchoomnuan/.m2/repository/org/clojure/tools.cli/0.4.2/tools.cli-0.4.2.jar:/Users/bchoomnuan/.m2/repository/metosin/jsonista/0.2.4/jsonista-0.2.4.jar:/Users/bchoomnuan/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar:/Users/bchoomnuan/.m2/repository/org/apache/commons/commons-compress/1.8/commons-compress-1.8.jar:/Users/bchoomnuan/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/bchoomnuan/.m2/repository/circleci/circleci.test/0.4.2/circleci.test-0.4.2.jar:/Users/bchoomnuan/.m2/repository/aero/aero/1.1.3/aero-1.1.3.jar:/Users/bchoomnuan/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/bchoomnuan/.m2/repository/org/clojure/spec.alpha/0.1.143/spec.alpha-0.1.143.jar \
+-H:Path=/Users/bchoomnuan/apps/swiza/swiza-httpbin \
+-H:+ReportUnsupportedElementsAtRuntime \
+-H:ClassInitialization=:build_time \
+-H:FallbackThreshold=0 \
+-H:ClassInitialization=javax.net.ssl.SslContext:rerun,org.httpkit.client.SslContextFactory:rerun,org.httpkit.client.HttpClient:rerun,sun.security.ssl.SSLContextImpl$DefaultSSLContext:rerun \
+-H:EnableURLProtocols=http,https \
+-H:EnableURLProtocols=http \
+-H:EnableURLProtocols=https \
+-H:+EnableAllSecurityServices \
+-H:+ReportExceptionStackTraces \
+-H:Name=/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal \
+-H:CLibraryPath=/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/clibraries/darwin-amd64 \
+-H:Class=b12n.swiza.httpbin.core_utils
+]
+^X^X^C^C^C%                                                                                                                        ✘ bchoomnuan@burin-mbp  ~/apps/swiza/swiza-httpbin   meetup/clj-syd  lein native-image
+Warning: Using a deprecated option --rerun-class-initialization-at-runtime. Currently there is no replacement for this option. Try using --initialize-at-run-time or use the non-API option -H:ClassInitialization directly.
+Executing [
+/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/bin/java \
+-XX:+UnlockExperimentalVMOptions \
+-XX:+EnableJVMCI \
+-Dtruffle.TrustAllTruffleRuntimeProviders=true \
+-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime \
+-Dgraalvm.ForcePolyglotInvalid=true \
+-Dgraalvm.locatorDisabled=true \
+-d64 \
+-XX:-UseJVMCIClassLoader \
+-XX:+UseJVMCINativeLibrary \
+-Xss10m \
+-Xms1g \
+-Xmx13743895344 \
+-Duser.country=US \
+-Duser.language=en \
+-Dorg.graalvm.version=19.2.0 \
+-Dorg.graalvm.config=CE \
+-Dcom.oracle.graalvm.isaot=true \
+-Djvmci.class.path.append=/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/graal.jar \
+-Xbootclasspath/a:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/boot/graaljs-scriptengine.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/boot/graal-sdk.jar \
+-cp \
+/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/llvm-wrapper.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/svm.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/javacpp.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/objectfile.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/graal-llvm.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/svm-llvm.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/llvm-platform-specific.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/pointsto.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/graal.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/graal-management.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/jvmci-api.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/jvmci-hotspot.jar \
+com.oracle.svm.hosted.NativeImageGeneratorRunner \
+-imagecp \
+/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/boot/graaljs-scriptengine.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/boot/graal-sdk.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/llvm-wrapper.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/svm.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/javacpp.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/objectfile.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/graal-llvm.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/svm-llvm.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/llvm-platform-specific.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/builder/pointsto.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/graal.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/graal-management.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/jvmci-api.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/jvmci/jvmci-hotspot.jar:/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/library-support.jar:/Users/bchoomnuan/apps/swiza/swiza-httpbin/src/test/clojure:/Users/bchoomnuan/apps/swiza/swiza-httpbin/src/test/java:/Users/bchoomnuan/apps/swiza/swiza-httpbin/src/main/clojure:/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/classes:/Users/bchoomnuan/.m2/repository/org/clojars/hozumi/clj-commons-exec/1.2.0/clj-commons-exec-1.2.0.jar:/Users/bchoomnuan/.m2/repository/org/flatland/classlojure/0.7.0/classlojure-0.7.0.jar:/Users/bchoomnuan/.m2/repository/nrepl/nrepl/0.6.0/nrepl-0.6.0.jar:/Users/bchoomnuan/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.9/jackson-datatype-jsr310-2.9.9.jar:/Users/bchoomnuan/.m2/repository/alembic/alembic/0.3.2/alembic-0.3.2.jar:/Users/bchoomnuan/.m2/repository/clojure-complete/clojure-complete/0.2.5/clojure-complete-0.2.5.jar:/Users/bchoomnuan/.m2/repository/expound/expound/0.7.2/expound-0.7.2.jar:/Users/bchoomnuan/.m2/repository/cucl/cucl/0.1.11/cucl-0.1.11.jar:/Users/bchoomnuan/.m2/repository/camel-snake-kebab/camel-snake-kebab/0.4.0/camel-snake-kebab-0.4.0.jar:/Users/bchoomnuan/.m2/repository/org/clojars/brenton/google-diff-match-patch/0.1/google-diff-match-patch-0.1.jar:/Users/bchoomnuan/.m2/repository/lein-as-resource/lein-as-resource/2.5.0/lein-as-resource-2.5.0.jar:/Users/bchoomnuan/.m2/repository/org/tcrawley/dynapath/0.2.3/dynapath-0.2.3.jar:/Users/bchoomnuan/.m2/repository/clj-time/clj-time/0.15.1/clj-time-0.15.1.jar:/Users/bchoomnuan/.m2/repository/org/clojure/test.check/0.9.0/test.check-0.9.0.jar:/Users/bchoomnuan/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.9.1/jackson-databind-2.9.9.1.jar:/Users/bchoomnuan/.m2/repository/cli-matic/cli-matic/0.3.8/cli-matic-0.3.8.jar:/Users/bchoomnuan/.m2/repository/lambdaisland/ansi/0.1.6/ansi-0.1.6.jar:/Users/bchoomnuan/.m2/repository/org/ow2/asm/asm-all/5.2/asm-all-5.2.jar:/Users/bchoomnuan/.m2/repository/org/clojure/clojure/1.9.0/clojure-1.9.0.jar:/Users/bchoomnuan/.m2/repository/http-kit/http-kit/2.3.0/http-kit-2.3.0.jar:/Users/bchoomnuan/.m2/repository/joda-time/joda-time/2.10/joda-time-2.10.jar:/Users/bchoomnuan/.m2/repository/jonase/eastwood/0.3.6/eastwood-0.3.6.jar:/Users/bchoomnuan/.m2/repository/org/tukaani/xz/1.5/xz-1.5.jar:/Users/bchoomnuan/.m2/repository/net/b12n/swiza-commons/0.1.2/swiza-commons-0.1.2.jar:/Users/bchoomnuan/.m2/repository/org/clojure/core.specs.alpha/0.1.24/core.specs.alpha-0.1.24.jar:/Users/bchoomnuan/.m2/repository/org/clojure/tools.namespace/0.2.11/tools.namespace-0.2.11.jar:/Users/bchoomnuan/.m2/repository/akvo/fs/20180904-152732.6dad3934/fs-20180904-152732.6dad3934.jar:/Users/bchoomnuan/.m2/repository/org/clojure/data.xml/0.0.8/data.xml-0.0.8.jar:/Users/bchoomnuan/.m2/repository/org/clojure/tools.cli/0.4.2/tools.cli-0.4.2.jar:/Users/bchoomnuan/.m2/repository/metosin/jsonista/0.2.4/jsonista-0.2.4.jar:/Users/bchoomnuan/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar:/Users/bchoomnuan/.m2/repository/org/apache/commons/commons-compress/1.8/commons-compress-1.8.jar:/Users/bchoomnuan/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/bchoomnuan/.m2/repository/circleci/circleci.test/0.4.2/circleci.test-0.4.2.jar:/Users/bchoomnuan/.m2/repository/aero/aero/1.1.3/aero-1.1.3.jar:/Users/bchoomnuan/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/bchoomnuan/.m2/repository/org/clojure/spec.alpha/0.1.143/spec.alpha-0.1.143.jar \
+-H:Path=/Users/bchoomnuan/apps/swiza/swiza-httpbin \
+-H:+ReportUnsupportedElementsAtRuntime \
+-H:ClassInitialization=:build_time \
+-H:FallbackThreshold=0 \
+-H:ClassInitialization=javax.net.ssl.SslContext:rerun,org.httpkit.client.SslContextFactory:rerun,org.httpkit.client.HttpClient:rerun,sun.security.ssl.SSLContextImpl$DefaultSSLContext:rerun \
+-H:EnableURLProtocols=http,https \
+-H:EnableURLProtocols=http \
+-H:EnableURLProtocols=https \
+-H:+EnableAllSecurityServices \
+-H:+ReportExceptionStackTraces \
+-H:Name=/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal \
+-H:CLibraryPath=/Users/bchoomnuan/apps/graalvm-ce-19.2.0/Contents/Home/jre/lib/svm/clibraries/darwin-amd64 \
+-H:Class=b12n.swiza.httpbin.core_utils
+]
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]    classlist:   3,759.16 ms
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]        (cap):   3,948.61 ms
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]        setup:   5,551.56 ms
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]   (typeflow):  56,630.47 ms
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]    (objects):  14,518.45 ms
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]   (features):   1,332.19 ms
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]     analysis:  73,859.57 ms
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]     (clinit):     795.09 ms
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]     universe:   2,359.76 ms
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]      (parse):   4,518.44 ms
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]     (inline):   6,480.42 ms
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]    (compile):  40,101.76 ms
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]      compile:  53,162.62 ms
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]        image:   3,665.59 ms
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]        write:   1,260.40 ms
+[/Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal:89795]      [total]: 147,043.38 ms
+Created native image /Users/bchoomnuan/apps/swiza/swiza-httpbin/target/httpbin-graal
