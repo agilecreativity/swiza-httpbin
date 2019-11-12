@@ -1,4 +1,4 @@
-(defproject net.b12n.swiza-httpbin "0.1.0"
+(defproject net.b12n/swiza-httpbin "0.1.0"
   :description "swiza-httpbin"
   :url "http://github.com/agilecreativity/swiza-httpbin"
   :license {:name "Eclipse Public License"
